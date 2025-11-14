@@ -6,11 +6,11 @@ const Home = () => {
     const models = useLoaderData();
     console.log(models)
     return (
-        <div>
+        <div className='grid grid-cols-4 gap-4'>
             {
                 models.map(model => <Card model={model}></Card>)
             }
-             <img src={models.image} alt="" />
+           
            
         </div>
     );
