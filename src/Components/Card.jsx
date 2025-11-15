@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link } from 'react-router'
 
 const Card = ({model}) => {
-    const {name,framework,useCase,description,image,createdBy,createdAt,purchased} = model
+    const {name,framework,useCase,description,image,createdBy,createdAt,purchased,_id} = model
     return (
-        <div>
+        <div className='p-2 shadow-xl'>
 
             <div className='flex items-center justify-between'>
                 <h1>{name}</h1>
@@ -17,6 +18,10 @@ const Card = ({model}) => {
                 <p>{createdBy}</p>
             </div>
             <div><p>{description}</p></div>
+
+           
+                <Link to={`/model-details/${_id}`} className='btn rounded-full bg-gray-300  py-2  w-full'>View Details</Link>
+            
            
         </div>
     );
