@@ -1,5 +1,7 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { BiSolidLike } from 'react-icons/bi';
+import { BiSolidDislike } from "react-icons/bi";
+import { Link, useLoaderData } from 'react-router';
 
 const ModelDetails = () => {
     const data = useLoaderData();
@@ -30,9 +32,11 @@ const ModelDetails = () => {
                     <p><span className="font-semibold">Purchased:</span> {model.purchasedCount} times</p> */}
                     <div className='col-span-4'>
                         <h1 className='text-4xl font-bold'>{model.name}</h1>
+                        <p className='font-semibold my-2'> {model.framework}</p>
+                        <p className='my-3'>{model.description}</p>
                             
                     </div>
-                    <div className='flex items-center'>
+                    <div className='flex items-center justify-end '>
 
                          <img
                         className=" h-40 w-40"
@@ -43,6 +47,20 @@ const ModelDetails = () => {
                     </div>
 
                 </div>
+
+                {/* <div className='flex items-center  gap-2 p-2 border rounded-full'>
+                    <h1>Vote : </h1>
+                     <div className='flex items-center  gap-2 '>
+                        <span className='border-l p-2 border-r'></span>
+                        <span></span>
+                     </div>
+                </div> */}
+
+                <div className="join join-vertical lg:join-horizontal">
+  <button className="btn bg-white join-item">Vote : </button>
+  <button className="btn join-item"><BiSolidLike /></button>
+  <button className="btn join-item"><BiSolidDislike /></button>
+</div>
 
                 {/* Buttons */}
                 <div className="mt-8 flex flex-col gap-3">
@@ -57,6 +75,12 @@ const ModelDetails = () => {
                         </div>
                     )}
 
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
+                        Purchase Model
+                    </button>
+                    <Link to={`/update-model/${model._id}`} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg text-center">
+                        Update Model
+                    </Link>
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
                         Purchase Model
                     </button>
