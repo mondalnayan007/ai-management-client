@@ -18,11 +18,12 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                loader: () => fetch('http://localhost:3000/models')
+                loader: () => fetch('http://localhost:3000/latest-models')
             },
             {
                 path: 'all-models',
-                element: <AllModels />
+                element: <AllModels />,
+                loader: () => fetch('http://localhost:3000/models')
             },
             {
                 path: 'add-model',

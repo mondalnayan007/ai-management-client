@@ -1,9 +1,41 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router';
 
 const UpdateModel = () => {
     const data = useLoaderData();
         const model = data.result;
+
+        const handleSubmit = (e)=>{
+       e.preventDefault();
+       const formData = {
+        name: e.target.name.value,
+        framework: e.target.framework.value,
+        useCase: e.target.useCase.value,
+        dataSet: e.target.dataSet.value,
+        description: e.target.description.value,
+        image : e.target.image.value,
+      
+       }
+       fetch(`http://localhost:3000/models/${model._id}`,{
+        method:'PUT',
+        headers:{
+            "Content-Type":"application/json",
+        },
+        body:JSON.stringify(formData)
+       })
+       .then(res =>res.json())
+       .then(data =>{
+        console.log(data)
+        toast.success('Successfully Data Updated')
+        
+        })
+
+       .catch(err =>console.log(err))
+
+       e.target.reset();
+
+    }
     return (
       <div>
             <div className="hero bg-base-200 min-h-screen">
@@ -14,7 +46,7 @@ const UpdateModel = () => {
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div className="card-body">
-                            <form  className="fieldset">
+                            <form onSubmit={handleSubmit}  className="fieldset">
                                 <label className="label">Name</label>
                                 <input type="text" name='name' defaultValue={model.name} className="border border-slate-200 rounded-md px-2 py-3" placeholder="Name" />
 
@@ -24,7 +56,7 @@ const UpdateModel = () => {
                                 <input type="text" name='useCase' defaultValue={model.useCase} className="border border-slate-200 rounded-md px-2 py-3" placeholder="Use Case" />
 
                                 <label className="label">Data Set</label>
-                                <input type="text" name='dataSet' defaultValue={model.dataSet} className="border border-slate-200 rounded-md px-2 py-3" placeholder="Data set" />
+                                <input type="text" name='dataSet' defaultValue={model.dataset} className="border border-slate-200 rounded-md px-2 py-3" placeholder="Data set" />
 
                                 <label className="label">Description</label>
                                 <textarea defaultValue={model.description} className='border  border-slate-200 rounded-lg px-3 py-3' name="description" id="" cols="30" rows="7" placeholder='Description'></textarea>
