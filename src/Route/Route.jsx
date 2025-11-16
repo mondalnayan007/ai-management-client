@@ -8,6 +8,8 @@ import AddModels from "../Pages/AddModels";
 import AllModels from "../Pages/AllModels";
 import ModelDetails from "../Pages/ModelDetails";
 import UpdateModel from "../Pages/UpdateModel";
+import MyModels from "../Pages/MyModels";
+import MyPurchase from "../Pages/MyPurchase";
 
 
 export const router = createBrowserRouter([
@@ -39,8 +41,8 @@ export const router = createBrowserRouter([
                     <PrivateRoute>
                         <ModelDetails></ModelDetails>
                     </PrivateRoute>
-                ),
-                loader:({params})=>fetch(`http://localhost:3000/models/${params.id}`)
+                )
+                
             },
             {
                 path:'/update-model/:id',
@@ -50,6 +52,18 @@ export const router = createBrowserRouter([
                     </PrivateRoute>
                 ),
                 loader:({params})=>fetch(`http://localhost:3000/models/${params.id}`)
+            },
+            {
+                path:'/my-models',
+                element:<PrivateRoute>
+                    <MyModels></MyModels>
+                </PrivateRoute>
+            },
+            {
+                path:'/my-purchase',
+                element:<PrivateRoute>
+                    <MyPurchase></MyPurchase>
+                </PrivateRoute>
             }
         ]
     },

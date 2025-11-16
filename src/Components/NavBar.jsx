@@ -74,7 +74,7 @@ const NavBar = () => {
                                 <p className="font-semibold">{user.displayName}</p>
                                 <p className="text-sm text-gray-500">{user.email}</p>
                             </li></div>
-                            <li><Link to="/model-purchase">Model Purchase</Link></li>
+                            <li><Link to="/my-purchase">My Purchase</Link></li>
                             <li><Link to="/my-models">My Models</Link></li>
                             <li><button onClick={handleLogOut} className="bg-red-500 text-white font-semibold">Logout</button></li>
                         </ul>

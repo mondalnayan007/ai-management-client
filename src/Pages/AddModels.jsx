@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const AddModels = () => {
     const {user} = use(AuthContext)
@@ -25,7 +26,10 @@ const AddModels = () => {
         body:JSON.stringify(formData)
        })
        .then(res =>res.json())
-       .then(data =>console.log(data))
+       .then(data =>{
+        toast.success('Succesfully Added')
+        console.log(data)
+       })
        .catch(err =>console.log(err))
 
        e.target.reset();
