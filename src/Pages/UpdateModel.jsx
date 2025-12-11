@@ -50,7 +50,7 @@ const UpdateModel = () => {
                 return;
             }
 
-            navigate("/");
+            navigate(`/model-details/${model._id}`);
 
             toast.success("Successfully updated");
             console.log(data);

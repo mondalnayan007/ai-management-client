@@ -4,7 +4,7 @@ import { BiSolidDislike } from "react-icons/bi";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Provider/AuthProvider';
-// ...existing code...
+
 
 const ModelDetails = () => {
 
@@ -14,6 +14,8 @@ const ModelDetails = () => {
     const [loading, setLoading] = useState(true)
     const { user } = useContext(AuthContext)
     const modeldata = model.result;
+
+    
 
     useEffect(() => {
         if (!id || !user?.accessToken) return;
@@ -105,6 +107,8 @@ const ModelDetails = () => {
         });
     }
 
+
+
     if (loading || !model?.result) {
         return <p>Loading...</p>
     } else {
@@ -125,7 +129,7 @@ const ModelDetails = () => {
                             </div>
                         </div>
                         <div>
-                           <p>Purchased : {modeldata.purchased}</p>
+                            <p>Purchased : {modeldata.purchased}</p>
                         </div>
                     </div>
 
@@ -151,28 +155,37 @@ const ModelDetails = () => {
                     </div>
 
                     <div className="mt-8 flex flex-col gap-3">
-                        {model.result.isCreator && (
-                            <div className="flex gap-4">
-                                <button className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 rounded-lg">
-                                    Edit
-                                </button>
-                                <button onClick={handleDelete} className="flex-1 bg-red-500 hover:bg-red-600 text-white font-medium py-2 rounded-lg">
-                                    Delete
+
+                        
+                        {model.result.createdBy === user?.email ? (
+                            <div className="flex flex-col gap-4">
+                                
+                                <Link
+                                    to={`/update-model/${modeldata._id}`}
+                                    className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg text-center"
+                                >
+                                    Update Model
+                                </Link>
+
+                                <button
+                                    onClick={handleDelete}
+                                    className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg"
+                                >
+                                    Delete Model
                                 </button>
                             </div>
+                        ) : (
+                          
+                            <button
+                                onClick={handlePurchase}
+                                className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg"
+                            >
+                                Purchase Model
+                            </button>
                         )}
 
-                        <button onClick={handlePurchase} className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
-                            Purchase Model
-                        </button>
-                        <Link to={`/update-model/${modeldata._id}`} className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg text-center">
-                            Update Model
-                        </Link>
-                        {/* kept one delete button (for non-creator flow) */}
-                        <button onClick={handleDelete} className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
-                            Delete Model
-                        </button>
                     </div>
+
                 </div>
             </div>
         );
