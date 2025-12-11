@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Google Gemini",
+    "framework": "TensorFlow",
+    "useCase": "Multimodal AI Assistant",
+    "dataset": "Text, Image, Audio, Video datasets",
+    "description": "Google Gemini is a multimodal AI model created for complex reasoning tasks. It can understand text, images, audio, and video together. It helps users with study tasks and idea generation. It provides professional-level writing assistance. It can analyze images and explain them. It helps programmers write and fix code. It supports real-time translation in many languages. It is used in Google Workspace for smart suggestions. It improves search through AI-based reasoning. It is widely used for everyday smart assistance.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyJkcRLngleEc4gWjq-ySX9p07ACSMQuzkA&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:20:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Meta Llama 3",
+    "framework": "PyTorch",
+    "useCase": "Open-Source Large Language Model",
+    "dataset": "Web Text + curated data",
+    "description": "Llama 3 is a powerful open-source language model released by Meta. It helps developers build chatbots easily. It is widely used for educational applications. It supports long contextual conversation. It can analyze documents and summarize them. It works well for coding tasks. It helps with data extraction from text. It is fast and optimized for local deployment. It enables AI apps without high cost. It is growing rapidly in developer communities.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOGTmFCgORUGRX71kdbV2Nrd3zDfEiTJF9A&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:25:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Claude 3",
+    "framework": "Custom Transformer Architecture",
+    "useCase": "Advanced Reasoning AI",
+    "dataset": "Large curated datasets",
+    "description": "Claude 3 is known for its strong reasoning capabilities. It can analyze long documents accurately. It helps businesses generate reports automatically. It can understand complex instructions clearly. It is used for legal and financial document processing. It helps writers generate high-quality content. It supports long-context memory functions. It provides safe and reliable outputs. It works well for multi-step problem solving. It is becoming a favorite choice for professionals.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ZLuvLLsftukNYljVhW4Dr28wFheqsxDzpg&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:30:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Runway Gen-2",
+    "framework": "Diffusion + Generative Models",
+    "useCase": "AI Video Generation",
+    "dataset": "Video-text datasets",
+    "description": "Runway Gen-2 is a popular model for AI video generation. It can turn text prompts into smooth videos. It is used by creators for filmmaking. It supports adding motion to still images. It provides realistic visual effects. It helps small creators produce studio-quality video. It is used for ads and marketing visuals. It can modify scenes using prompts. It works well for storytelling videos. It is widely used by digital artists.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjoRDRxXw_M3AxPBKSB4Avp8UaAoo1sgUKGg&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:35:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Perplexity AI",
+    "framework": "Custom RAG Architecture",
+    "useCase": "AI Search Engine",
+    "dataset": "Web search index + verified sources",
+    "description": "Perplexity AI is an AI-powered search assistant. It provides accurate and source-based answers. It helps users research complex topics. It can summarize long articles instantly. It gives citations for every result. It supports real-time internet search. It helps students with academic research. It makes information easier to understand. It provides clean and fast answers. It is widely used as an AI alternative to Google Search.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKimxGbRw6a4bs9LbyNdArX3tltapwLsUtzQ&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:40:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Midjourney V6",
+    "framework": "Advanced Diffusion Model",
+    "useCase": "AI Art Generation",
+    "dataset": "Text-image datasets",
+    "description": "Midjourney V6 generates extremely detailed artwork. It is popular among graphic designers. It produces hyper-realistic visuals. It can create fantasy and cinematic scenes. It helps with concept art creation. It supports different artistic styles. It is used in branding and advertising. It generates stunning visuals within seconds. It inspires creative professionals. It is one of the most powerful AI art tools available.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX0sa7VSuMstpw0T2Ln9oJG6lWoawk-WNdjw&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:45:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Suno AI",
+    "framework": "Custom Music Generation Model",
+    "useCase": "AI Music Creation",
+    "dataset": "Music + Vocal datasets",
+    "description": "Suno AI creates full music tracks from text prompts. It supports multiple genres. It can generate vocals with realistic tone. It helps musicians create ideas quickly. It is used for background music in videos. It supports creating full-length songs. It can generate instrumental tracks easily. It is popular on social media. It helps beginners create professional music. It is widely used by content creators worldwide.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuqpLMqXEmhL9gue8X7jmbyQvC08uMHgXvlg&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:50:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "ElevenLabs Prime Voice",
+    "framework": "Voice Synthesis Model",
+    "useCase": "AI Voice Generation",
+    "dataset": "Speech datasets",
+    "description": "ElevenLabs creates natural human-like voices. It is used for narration in videos. It helps YouTubers generate voiceovers instantly. It can clone voices realistically. It supports multiple languages. It produces clear and smooth audio. It helps with audiobook creation. It is widely used by content creators. It generates professional-quality voice tracks. It saves time for creators who cannot record audio.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQVJdqsvK0M0Fmq8TCUV_fps1ygwHPcHeReg&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T13:55:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Reka AI",
+    "framework": "Multimodal Transformer",
+    "useCase": "General-Purpose AI",
+    "dataset": "Multimodal datasets",
+    "description": "Reka AI is a versatile multimodal model. It can process images and text together. It supports reasoning and analysis tasks. It is used for enterprise solutions. It helps generate structured data outputs. It improves productivity for professionals. It helps automate workflow tasks. It provides high-quality answers. It supports visual understanding features. It is becoming popular among developers.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXkz6L9y2v6nKNnDhHRSis6O3SxHKoy_okA&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T14:00:00.000Z",
+    "purchased": 0
+  },
+  {
+    "name": "Pika Labs Video AI",
+    "framework": "Video Diffusion Model",
+    "useCase": "AI Video Creation",
+    "dataset": "Video training datasets",
+    "description": "Pika AI is a model for generating videos from text. It helps users create cinematic shots. It can animate still images. It provides smooth motion effects. It is used widely by video creators. It supports multiple camera styles. It can generate short clips easily. It works well for storytelling visuals. It helps in creative filmmaking projects. It is growing fast among digital creators.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNk-6Gn-zuk7KxVv_cJ6YnrIvBNh_RwvUgjg&s",
+    "createdBy": "user@example.com",
+    "createdAt": "2025-11-15T14:05:00.000Z",
+    "purchased": 0
+  }
+]
