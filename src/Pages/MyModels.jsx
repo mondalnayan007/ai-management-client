@@ -13,7 +13,7 @@ const MyModels = () => {
     
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/my-models?email=${user.email}`)
+        fetch(`https://ai-management-server.vercel.app/my-models?email=${user.email}`)
         .then(res => res.json())
         .then(data=>{
             console.log(data)

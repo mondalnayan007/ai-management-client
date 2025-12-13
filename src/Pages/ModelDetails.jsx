@@ -20,7 +20,7 @@ const ModelDetails = () => {
     useEffect(() => {
         if (!id || !user?.accessToken) return;
 
-        fetch(`http://localhost:3000/models/${id}`, {
+        fetch(`https://ai-management-server.vercel.app/models/${id}`, {
             headers: {
                 authorization: `Bearer ${user.accessToken}`
             }
@@ -54,7 +54,7 @@ const ModelDetails = () => {
             purchasedBy: user?.email
         }
 
-        fetch(`http://localhost:3000/purchase/${modeldata._id}`, {
+        fetch(`https://ai-management-server.vercel.app/purchase/${modeldata._id}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const ModelDetails = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/models/${modeldata._id}`, {
+                fetch(`https://ai-management-server.vercel.app/models/${modeldata._id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

@@ -16,7 +16,7 @@ const NavBar = () => {
 
 
   const handleTheme = (checked) => {
-    setTheme(checked ? "synthwave": "light")
+    setTheme(checked ? "dark": "light")
   }
 
     const handleLogOut = () => {

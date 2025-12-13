@@ -11,7 +11,7 @@ const MyPurchase = () => {
 
 
          useEffect(()=>{
-                fetch(`http://localhost:3000/my-purchase?email=${user.email}`, {
+                fetch(`https://ai-management-server.vercel.app/my-purchase?email=${user.email}`, {
                     headers: {
                         authorization: `Bearer ${user.accessToken}`
                     }

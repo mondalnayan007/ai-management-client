@@ -10,9 +10,9 @@ const AllModels = () => {
     const [searchText, setSearchText] = useState("");
     const [category, setCategory] = useState("");
 
-    // 🔄 Unified Fetch Function — search বা filter যাই বদলাক
+  
     const fetchFilteredModels = (newSearch, newCategory) => {
-        const url = `http://localhost:3000/search-filter?search=${newSearch}&category=${newCategory}`;
+        const url = `https://ai-management-server.vercel.app/search-filter?search=${newSearch}&category=${newCategory}`;
 
         fetch(url)
             .then(res => res.json())
@@ -22,7 +22,7 @@ const AllModels = () => {
             .catch(err => console.log(err));
     };
 
-    // 🔍 Search Handler
+    //  Search Handler
     const handleSearch = (e) => {
         e.preventDefault();
         const text = e.target.search.value;
@@ -30,12 +30,12 @@ const AllModels = () => {
         fetchFilteredModels(text, category);
     };
 
-    // 🏷 Filter Handler
+    //  Filter Handler
     const handleFilter = (e) => {
         const value = e.target.value;
         setCategory(value);
 
-        // যদি All সিলেক্ট করে → সব দেখাবে
+       
         if (!value && !searchText) {
             setModels(allModels);
             return;
