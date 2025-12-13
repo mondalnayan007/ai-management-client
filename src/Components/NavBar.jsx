@@ -1,10 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, Navigate, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 
 const NavBar = () => {
     const { user, logOut, setUser } = useContext(AuthContext);
+
+     const [theme, setTheme] = useState(localStorage.getItem('theme') || "light")
+
+  useEffect(() => {
+    const html = document.querySelector('html')
+     html.setAttribute("data-theme", theme)
+     localStorage.setItem("theme", theme)
+  }, [theme])
+
+
+  const handleTheme = (checked) => {
+    setTheme(checked ? "synthwave": "light")
+  }
 
     const handleLogOut = () => {
         logOut()
@@ -50,7 +63,12 @@ const NavBar = () => {
             </div>
 
             {/* Navbar End */}
-            <div className="navbar-end space-x-3">
+            <div className="navbar-end space-x-4">
+                 <input
+           onChange={(e)=> handleTheme(e.target.checked)}
+           type="checkbox"
+           defaultChecked={localStorage.getItem('theme') === "dark"}
+           className="toggle"/>
                 {user ? (
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

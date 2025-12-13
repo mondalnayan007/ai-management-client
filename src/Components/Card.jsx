@@ -10,7 +10,7 @@ const Card = ({model}) => {
     return words.slice(0, wordLimit).join(' ') + '...';
   };
     return (
-        <div className='p-3 rounded-xl shadow-xl'>
+        <div className='p-3 rounded-xl shadow-xl '>
 
             <div className='flex items-center justify-between'>
                 <h1 className='text-xl font-bold'>{name}</h1>
