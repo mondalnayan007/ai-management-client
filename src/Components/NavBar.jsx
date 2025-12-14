@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, Navigate, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import logo from '../assets/logo.png'
 
 const NavBar = () => {
     const { user, logOut, setUser } = useContext(AuthContext);
@@ -45,11 +46,11 @@ const NavBar = () => {
                     <ul tabIndex={-1} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/all-models">All Models</NavLink>
-                        <NavLink to="/aboutus">About Us</NavLink>
+                        
                         
                     </ul>
                 </div>
-                <Link to="/"><img className="h-14 w-20" alt="Ai" /></Link>
+                <Link to="/"><img className="h-14 w-20" src={logo} alt="Ai" /></Link>
             </div>
 
             {/* Navbar Center */}
@@ -57,7 +58,7 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1 flex items-center gap-3">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/all-models">All Models</NavLink>
-                    <NavLink to="/aboutus">About Us</NavLink>
+                    
                     
                 </ul>
             </div>
