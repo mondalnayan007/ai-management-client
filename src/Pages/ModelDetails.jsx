@@ -113,7 +113,7 @@ const ModelDetails = () => {
         return <p>Loading...</p>
     } else {
         return (
-            <div className="w-full flex justify-center p-6 bg-gray-100 min-h-screen">
+            <div className="w-full flex justify-center p-6 bg-gray-100 ">
                 <div className="w-full max-w-6xl bg-white rounded-2xl shadow-md p-6 border h-auto">
 
                     <div className="flex items-center justify-between ">

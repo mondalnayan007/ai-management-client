@@ -103,7 +103,7 @@ const Slider = () => {
                                         className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white font-semibold"
                                         to={'/all-models'}
                                     >
-                                        Explore More
+                                        Explore 
                                     </Link>
                                 </div>
                             </div>
