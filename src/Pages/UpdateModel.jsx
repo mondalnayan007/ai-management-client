@@ -69,11 +69,11 @@ const UpdateModel = () => {
     return (
       <div>
         <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col ">
+            <div className="hero-content flex-col  w-3/5">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Update Your Model</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100 w-full  shadow-2xl">
                     <div className="card-body">
                         <form onSubmit={handleSubmit} className="fieldset">
                             <label className="label">Name</label>
