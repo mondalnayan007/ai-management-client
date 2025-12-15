@@ -75,6 +75,10 @@ const ModelDetails = () => {
             .catch(err => console.log(err))
     }
 
+    const vote =()=>{
+        Swal.fire('Thanks for your feedback!')
+    }
+
     const handleDelete = () => {
         if (!modeldata) return;
 
@@ -150,8 +154,8 @@ const ModelDetails = () => {
 
                     <div className="join join-vertical lg:join-horizontal mt-4">
                         <button className="btn bg-white join-item">Vote : </button>
-                        <button className="btn join-item"><BiSolidLike /></button>
-                        <button className="btn join-item"><BiSolidDislike /></button>
+                        <button className="btn join-item" onClick={vote}><BiSolidLike /></button>
+                        <button className="btn join-item" onClick={vote}><BiSolidDislike /></button>
                     </div>
 
                     <div className="mt-8 flex flex-col gap-3">
