@@ -46,15 +46,13 @@ const AllModels = () => {
 
     return (
         <div>
-            <div className='flex items-center justify-between gap-4 mx-10 my-5'>
-                <span className='px-2 py-1 rounded-full bg-blue-400 text-white font-semibold text-xs md:text-sm '>
-                    <Link to='/add-model'>+ Add Model</Link>
-                </span>
+            <div className='  mx-12  my-5'>
+                
 
-                <div className='grid grid-cols-8 items-center justify-between gap-4'>
+                <div className='grid grid-cols-8 items-center justify-between  gap-4'>
                     
                     {/* Search */}
-                    <div className='col-span-4'>
+                    <div className='col-span-4 '>
                         <form onSubmit={handleSearch}>
                             <div className="join">
                                 <div>
@@ -74,10 +72,10 @@ const AllModels = () => {
                     </div>
 
                     {/* Filter Dropdown */}
-                    <div className='w-full col-span-4'>
+                    <div className=' col-span-4 flex justify-end'>
                         <select
                             name="category"
-                            className="select select-bordered join-item w-full"
+                            className="select select-bordered join-item "
                             onChange={handleFilter}
                         >
                             <option value="">All</option>
