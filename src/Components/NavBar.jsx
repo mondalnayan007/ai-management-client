@@ -46,6 +46,7 @@ const NavBar = () => {
                     <ul tabIndex={-1} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/all-models">All Models</NavLink>
+                        <NavLink to="/add-model">Add Model</NavLink>
                         
                         
                     </ul>
@@ -58,6 +59,7 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1 flex items-center gap-3">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/all-models">All Models</NavLink>
+                    <NavLink to="/add-model">Add Model</NavLink>
                     
                     
                 </ul>
