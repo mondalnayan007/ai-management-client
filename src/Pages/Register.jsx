@@ -103,20 +103,20 @@ const Register = () => {
                         <hr className='h-0 text-gray-300 w-[80%] mx-auto mt-8' />
                         <form onSubmit={handleRegister} className="card-body">
                             <fieldset className="fieldset">
-                                {/* Name  */}
+                                
                                 <label className="label font-bold text-black py-1 text-base">Your Name</label>
                                 <input type="text" required name='name' className="input" placeholder="Your Name" />
                                 {
                                     nameError && <p className='text-red-500 text-sm'>{nameError}</p>
                                 }
 
-                                {/* Photo url  */}
+                                
                                 <label className="label font-bold text-black py-1 text-base">Photo URL</label>
                                 <input type="text" required name='photo' className="input" placeholder="Your Photo URL" />
-                                {/* email  */}
+                                
                                 <label className="label font-bold text-black py-1 text-base">Email</label>
                                 <input name='email' required type="email" className="input" placeholder="Email" />
-                                {/* password  */}
+                               
                                 <label className="label font-bold text-black py-1 text-base">Password</label>
                                 <div className="relative">
                                               <input

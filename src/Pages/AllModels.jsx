@@ -22,7 +22,7 @@ const AllModels = () => {
             .catch(err => console.log(err));
     };
 
-    //  Search Handler
+    
     const handleSearch = (e) => {
         e.preventDefault();
         const text = e.target.search.value;
@@ -30,7 +30,7 @@ const AllModels = () => {
         fetchFilteredModels(text, category);
     };
 
-    //  Filter Handler
+
     const handleFilter = (e) => {
         const value = e.target.value;
         setCategory(value);
@@ -51,7 +51,7 @@ const AllModels = () => {
 
                 <div className='grid grid-cols-8 items-center justify-between  gap-4'>
                     
-                    {/* Search */}
+                   
                     <div className='col-span-4 '>
                         <form onSubmit={handleSearch}>
                             <div className="join">
@@ -71,7 +71,7 @@ const AllModels = () => {
                         </form>
                     </div>
 
-                    {/* Filter Dropdown */}
+                 
                     <div className=' col-span-4 flex justify-end'>
                         <select
                             name="category"
@@ -87,7 +87,7 @@ const AllModels = () => {
                 </div>
             </div>
 
-            {/* Models Grid */}
+         
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 px-6 md:px-14 mb-8'>
                 {
                     models?.map(model => <Card key={model._id} model={model} />)

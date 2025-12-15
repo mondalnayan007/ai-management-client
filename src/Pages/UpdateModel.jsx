@@ -8,7 +8,7 @@ const UpdateModel = () => {
     const data = useLoaderData();
     const navigate = useNavigate();
 
-    // Normalize _id → always a string
+  
     const modelData = data?.result ?? data;
     const model = {
         ...modelData,
