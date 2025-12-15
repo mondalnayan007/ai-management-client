@@ -9,7 +9,7 @@ const ErrorPage = () => {
             </div>
 
             <div className='flex justify-center my-6'>
-                <Link to='/'><button className='btn bg-blue-400 text-white font-semibold'> Back to Home</button></Link>
+                <Link to='/'><button className='btn bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white font-semibold  py-2  w-full'> Back to Home</button></Link>
             </div>
         </div>
     );
