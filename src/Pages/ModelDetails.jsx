@@ -20,11 +20,7 @@ const ModelDetails = () => {
     useEffect(() => {
         if (!id || !user?.accessToken) return;
 
-        fetch(`https://ai-management-server.vercel.app/models/${id}`, {
-            headers: {
-                authorization: `Bearer ${user.accessToken}`
-            }
-        })
+        fetch(`https://ai-management-server.vercel.app/models/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -117,8 +113,8 @@ const ModelDetails = () => {
         return <p>Loading...</p>
     } else {
         return (
-            <div className="w-full flex justify-center p-6 bg-gray-100 ">
-                <div className="w-full max-w-6xl bg-white rounded-2xl shadow-md p-6 border h-auto">
+            <div className="w-full flex justify-center p-6  ">
+                <div className="w-full max-w-6xl  rounded-2xl shadow-md p-6 border h-auto">
 
                     <div className="flex items-center justify-between ">
                         <div className='flex items-center gap-4 border-b pb-4'>
@@ -129,7 +125,7 @@ const ModelDetails = () => {
                             />
                             <div>
                                 <h1 className="text-2xl font-semibold">{model.result.name}</h1>
-                                <p className="text-gray-500 text-sm">Created on {model.result.createdAt}</p>
+                                <p className=" text-sm">Created on {model.result.createdAt}</p>
                             </div>
                         </div>
                         <div>
@@ -137,7 +133,7 @@ const ModelDetails = () => {
                         </div>
                     </div>
 
-                    <div className="mt-6 grid grid-cols-6  gap-3 text-gray-700">
+                    <div className="mt-6 grid grid-cols-6  gap-3 ">
                         <div className='col-span-4'>
                             <h1 className='text-4xl font-bold'>{model.result.name}</h1>
                             <p className='font-semibold my-2'> {model.result.framework}</p>
@@ -153,7 +149,7 @@ const ModelDetails = () => {
                     </div>
 
                     <div className="join join-vertical lg:join-horizontal mt-4">
-                        <button className="btn bg-white join-item">Vote : </button>
+                        <button className="btn  join-item">Vote : </button>
                         <button className="btn join-item" onClick={vote}><BiSolidLike /></button>
                         <button className="btn join-item" onClick={vote}><BiSolidDislike /></button>
                     </div>
